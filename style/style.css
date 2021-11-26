@@ -486,6 +486,9 @@ p {
   align-self: center;
   border: solid 0.1px white; }
 
+.card__parrafo--color {
+  color: black; }
+
 /* TABLET */
 @media only screen and (max-width: 767px) and (min-width: 321px) {
   .titulo--fontStyle {
