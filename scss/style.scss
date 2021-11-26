@@ -1,0 +1,730 @@
+@import "variables.scss";
+
+/* ESCRITORIO */
+
+// El condicional no tiene mucho sentido, pero lo puse para cumplimentar los requerimientos del desafío
+body {
+  @if $colorFondo == white {
+    background-color: black;
+  } @else {
+    background-color: black;
+  }
+}
+
+/* RESETEO CSS */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* A continuación le doy estilo al body */
+
+.estilosBody--fontStyle {
+  font-style: normal;
+  font-family: "Quicksand", sans-serif;
+  line-height: 25px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+/* A continuación le doy estilo al H1 */
+
+.titulo--fontStyle {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  font-size: $h1FontSize + $h1FontSize;
+}
+
+h1 {
+  transition: all 3s;
+}
+
+h1:hover {
+  transform: translate(0px, 10px);
+  color: black;
+  font-weight: normal;
+}
+
+/* A continuación le doy estilo a los enlaces, listas, items */
+
+a {
+  text-decoration: none;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.contenidoEnMeses__vinetas--estilo {
+  list-style: none;
+}
+
+.estilosMenuNavegacion li {
+  display: inline-block;
+  position: relative;
+  padding: 0.4rem;
+}
+
+ul li ul {
+  position: absolute;
+  display: none;
+}
+
+// li a:hover {
+//   color: rgb(255, 0, 0);
+// }
+
+/* A continuación utilicé la propiedad mixin para cambiar color a los enlaces dentro de list items, al hacer hover */
+@mixin colorHover($color) {
+  color: $color;
+}
+li a:hover {
+  @include colorHover(rgb(255, 0, 0));
+}
+
+ul li:hover ul {
+  display: block;
+  z-index: 1;
+  background-color: black;
+  padding: 0%;
+}
+
+li li a:hover {
+  color: rgb(184, 0, 0);
+}
+
+/* @keyframes home {
+        100% {
+          color: white;
+          background-color: rgb(184, 0, 0);
+          font-weight: normal;
+        }
+      }
+    
+      .homeAnimacion {
+        color: rgb(255, 0, 0);
+        background-color: black;
+        font-weight: bolder;
+        animation-name: home;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-delay: 3s;
+      } */
+
+@keyframes home {
+  0% {
+    width: 10%;
+  }
+  25% {
+    width: 15%;
+  }
+  50% {
+    width: 22%;
+  }
+  75% {
+    width: 15%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+.homeAnimacion {
+  /* color: rgb(255, 0, 0);
+        background-color: black;
+        font-weight: bolder; */
+  background-color: rgb(184, 0, 0);
+  animation-name: home;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+/* A continuación aplico grids en la clase padre definida: claseGrid */
+
+.claseGrid {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "carrusel carrusel aside"
+    "suscripciones suscripciones aside"
+    "noticias noticias calendario"
+    "footer footer footer";
+  grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
+  grid-template-columns: 1f 1f 1f;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+  justify-items: stretch;
+  align-items: stretch;
+  height: auto;
+}
+
+/* La siguiente clase es hija de claseGrid y a su vez es padre de otros elementos */
+
+.claseHeader {
+  z-index: 3;
+  grid-area: header;
+  align-self: start;
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  display: grid;
+  grid-template-areas: "menu titulo redes";
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Las siguientes clases son hijas de claseHeader */
+
+.claseTitulo {
+  grid-area: titulo;
+}
+
+.claseMenu {
+  grid-area: menu;
+  padding-left: 20px;
+}
+
+.claseRedes {
+  grid-area: redes;
+}
+
+/* La siguiente clase es hija de claseGrid y a su vez es padre de otros elementos */
+
+.claseCarrusel {
+  margin-left: 0.5rem;
+  grid-area: carrusel;
+  /* background-color: #1f001f;
+        display: grid;
+        grid-template-areas: "imagen1 imagen2 imagen3";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-items: center;
+        align-items: center;
+        overflow: hidden; */
+  width: $ancho/0.99;
+  justify-self: center;
+}
+
+/* Las siguientes clases son hijas de claseCarrusel */
+
+/* .claseImgHijo1 {
+        grid-area: imagen1;
+      }
+    
+      .claseImgHijo2 {
+        grid-area: imagen2;
+      }
+    
+      .claseImgHijo3 {
+        grid-area: imagen3;
+      } */
+
+/* La siguiente clase es hija de claseGrid */
+
+.contenidoEnMeses {
+  margin-right: 0.5rem;
+  grid-area: aside;
+  background-color: $colorFondoMenuContenidoEnMeses;
+}
+
+/* La siguiente clase es hija de claseGrid */
+
+.suscripciones {
+  margin-left: 0.5rem;
+  grid-area: suscripciones;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: end;
+}
+
+/* La siguiente clase es hija de claseGrid */
+
+.noticias {
+  margin-left: 0.5rem;
+  grid-area: noticias;
+  background-color: $colorFondoNoticias;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.noticias__parrafo {
+  background-color: rgb(69, 33, 228);
+  text-align: center;
+  align-self: center;
+  border: solid 0.1px white;
+}
+
+/* La siguiente clase es hija de claseGrid */
+
+.claseCalendario {
+  margin-right: 0.5rem;
+  grid-area: calendario;
+  background-color: $colorFondoCalendario;
+}
+
+/* La siguiente clase es hija de claseGrid */
+
+.claseFooter {
+  grid-area: footer;
+  width: 100%;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.claseFooter--background {
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+}
+
+/* A continuación le doy estilo a imágenes y logos de redes sociales */
+
+.claseImg {
+  /* width: 350px; */
+  border-radius: 5%;
+}
+
+.claseImgBordeGallery {
+  border-radius: 5%;
+}
+
+/* .claseImgMedio {
+        width: 450px;
+      } */
+
+/* .claseImgMedio:hover,
+      .claseImgHijo1:hover,
+      .claseImgHijo3:hover {
+        transform: scale(1.2, 1.2);
+      } */
+
+.claseImgLogo {
+  width: 70px;
+  padding-bottom: 0.5rem;
+}
+
+/* A continuación le doy estilo a elementos varios */
+
+span,
+label {
+  color: white;
+}
+
+p {
+  color: white;
+  font-weight: 400;
+}
+
+/* A continuación le doy estilo a las imágenes de Gallery y Gallery (anim, transf, trans) */
+
+.claseImgGallery img {
+  transform: rotateX(30deg);
+}
+
+.claseImgGallery img:hover {
+  transform: rotateX(0deg);
+}
+
+.claseImgLogo:hover {
+  transform: rotateY(30deg);
+}
+
+/* A continuación le doy estilo a gallery usando grids */
+
+/* Clase padre */
+
+.claseGridGallery {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "spotify"
+    "imagenes"
+    "videos"
+    "footer";
+  grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Clases hijas de claseGridGallery */
+
+.claseHeaderGallery {
+  grid-area: header;
+  align-self: start;
+  position: fixed;
+  z-index: 2;
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-areas: "menu";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.claseHeaderMenuGallery {
+  grid-area: menu;
+}
+
+.claseSpotifyGallery {
+  grid-area: spotify;
+  justify-self: stretch;
+  margin-left: 2.8rem;
+  margin-right: 2.8rem;
+}
+
+.claseImagenesGallery {
+  grid-area: imagenes;
+}
+
+.claseVideosGallery {
+  grid-area: videos;
+}
+
+.claseFooterGallery {
+  grid-area: footer;
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+  width: 100%;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* A continuación le doy estilo a las páginas us, biography y contact */
+
+/* Clase padre */
+
+.claseGridUsBiographyContact {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "header"
+    "imagen"
+    "content"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 7fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* A continuación utilicé un each para agregar imágenes en las páginas us, bio y contact */
+@each $fotoUsBio in staff, band, contact {
+  .#{$fotoUsBio}Img {
+    background-image: url("../media/images/#{$fotoUsBio}.jpg");
+    background-position: center 100%;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/* Clases hijas de claseGridUsBiographyContact */
+
+.headerGridUsBiographyContact {
+  grid-area: header;
+}
+
+.staffImg,
+.bandImg,
+.contactImg {
+  grid-area: imagen;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.contentGridUsBiographyContact {
+  grid-area: content;
+}
+
+.footerGridUsBiographyContact {
+  grid-area: footer;
+}
+
+/* A continuación le doy estilo al texto de páginas us y biography */
+
+.texto {
+  padding: 3rem;
+}
+.texto__parrafo--align {
+  text-align: justify;
+}
+
+/* A continuación le doy estilo al header de las páginas us, biography y contact */
+
+.claseHeaderUsBiographyContact {
+  align-self: start;
+  position: fixed;
+  z-index: 2;
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-areas: "menu";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* A continuación le doy estilo al footer de las páginas us, biography y contact */
+
+.claseFooterUsBiographyContact {
+  background-image: radial-gradient(#826aed, rgb(69, 33, 228));
+  width: 100%;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* A continuación le doy estilo a página contact usando flexbox */
+
+.claseContactoFlex {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  justify-content: space-evenly;
+}
+
+/* A continuación le doy estilo a la tabla de suscripciones */
+
+.suscripciones__tabla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-items: stretch;
+  align-items: stretch;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+  background-color: $colorFondoTablaSuscripcion;
+}
+
+// .div1,
+// .div2,
+// .div3,
+// .div4,
+// .div5,
+// .div6,
+// .div7,
+// .div8,
+// .div9,
+// .div10,
+// .div11,
+// .div12 {
+//   background-color: rgb(69, 33, 228);
+//   text-align: center;
+//   align-self: center;
+//   border: solid 0.1px white;
+// }
+
+/* Usar el bucle no tendría mucho sentido en este caso, pero lo utilicé para cumplimentar los requerimientos del desafío */
+
+@for $i from 1 to 13 {
+  .div#{$i} {
+    background-color: rgb(69, 33, 228);
+    text-align: center;
+    align-self: center;
+    border: solid 0.1px white;
+  }
+}
+
+/* TABLET */
+
+@media only screen and (max-width: 767px) and (min-width: 321px) {
+  .titulo--fontStyle {
+    font-size: $h1FontSize;
+  }
+
+  .claseGrid {
+    grid-template-areas:
+      "header header"
+      "carrusel aside"
+      "suscripciones aside"
+      "noticias calendario"
+      "footer footer";
+    grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
+    grid-template-columns: 1f 1f;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+  }
+
+  .claseHeader {
+    grid-template-areas: "menu titulo";
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 4fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .claseMenu {
+    padding-left: 10px;
+  }
+
+  .claseCarrusel {
+    margin-left: 0.1rem;
+  }
+
+  .carousel-indicators button {
+    display: none;
+  }
+
+  .contenidoEnMeses {
+    margin-right: 0.1rem;
+  }
+
+  .suscripciones {
+    margin-left: 0.1rem;
+  }
+
+  .noticias {
+    margin-left: 0.1rem;
+  }
+
+  .claseCalendario {
+    margin-right: 0.1rem;
+  }
+
+  .claseImgLogo {
+    display: none;
+  }
+
+  footer div p {
+    display: none;
+  }
+
+  .claseGridGallery {
+    grid-template-areas:
+      "header"
+      "spotify"
+      "imagenes"
+      "videos"
+      "footer";
+    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .claseHeaderGallery {
+    grid-template-areas: "menu";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .claseGridUsBiographyContact {
+    grid-template-rows: 0.3fr 0.5fr 11fr 0.5fr;
+  }
+
+  .margenSuperiorContact {
+    margin-top: 50%;
+  }
+
+  .contactoMain--margenInferior {
+    margin-bottom: 10rem;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 320px) {
+  .titulo--fontStyle {
+    font-size: $h1FontSize;
+  }
+
+  .claseGrid {
+    grid-template-areas:
+      "header"
+      "carrusel"
+      "suscripciones"
+      "noticias"
+      "footer";
+    grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
+    grid-template-columns: 1f;
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+  }
+
+  .claseHeader {
+    grid-template-areas: "menu";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .claseTitulo {
+    display: none;
+  }
+
+  .claseMenu {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .claseRedes {
+    display: none;
+  }
+
+  .carousel-indicators button {
+    display: none;
+  }
+
+  .contenidoEnMeses {
+    display: none;
+  }
+
+  .claseCalendario {
+    display: none;
+  }
+
+  .claseImgLogo {
+    display: none;
+  }
+
+  footer div p {
+    display: none;
+  }
+
+  .texto {
+    padding: 1rem;
+  }
+
+  .contactoMain--margenInferior {
+    margin-bottom: 15rem;
+  }
+
+  .claseGridUsBiographyContact {
+    grid-template-areas:
+      "header"
+      "imagen"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.4fr 11fr 0.1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
