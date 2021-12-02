@@ -530,4 +530,6 @@ p {
   .navbar {
     display: flex; }
   .claseMenu {
-    display: none; } }
+    display: none; }
+  .claseCarrusel {
+    width: 90vw; } }
