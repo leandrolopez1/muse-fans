@@ -68,7 +68,7 @@
           />
         </a>
       </div>
-      <!-- En el encabezado también va el logo y los íconos de las redes sociales asociadas al sitio web -->
+      <!-- En el encabezado también va el titulo y los íconos de las redes sociales asociadas al sitio web -->
       <div class="claseMenu">
         <nav>
           <ul class="estilosMenuNavegacion">
@@ -93,28 +93,27 @@
           </ul>
         </nav>
       </div>
+      <!-- menu hamburguesa, solo para mobile -->
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <p class="text-white h4"><a href="./index.html">HOME</a></p>
+          <p class="text-white h4"><a href="./pages/us.html">US</a></p>
+          <p class="text-white h4"><a href="./pages/gallery.html">GALLERY</a></p>
+          <p class="text-white h4"><a href="./pages/biography.html">BIOGRAPHY</a></p>
+          <p class="text-white h4"><a href="./pages/contact.html">CONTACT</a></p>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <!-- En esta sección va un carrusel de imágenes ubicado al centro y a la izquierda -->
-    <!-- Y a la derecha un menú de contenido organizado en meses -->
-
-    <!-- <main class="claseCarrusel">
-      <img
-        src="./media/images/concert-1.jpg"
-        alt="concert-image-wimbledon"
-        class="claseImg claseImgHijo1"
-      />
-      <img
-        src="./media/images/concert-2.jpg"
-        alt="concert-image-newhampshire"
-        class="claseImgMedio claseImgHijo2"
-      />
-      <img
-        src="./media/images/concert-3.jpg"
-        alt="concert-image-london"
-        class="claseImg claseImgHijo3"
-      />
-    </main> -->
+    <!-- Y a la derecha un menú de contenido organizado en meses -->   
 
     <main
       id="carouselExampleIndicators"
@@ -190,37 +189,29 @@
       id="content"
       class="contenidoEnMeses animate__animated animate__backInRight"
     >
-      <!-- <ul class="contenidoEnMeses__vinetas--estilo">
-        <li><p>OCTOBER</p></li>
-        <li><p>SEPTEMBER</p></li>
-        <li><p>AUGUST</p></li>
-        <li><p>JULY</p></li>
-        <li><p>JUNE</p></li>
-        <li><p>MAY</p></li>
-      </ul> -->
       <div class="card" style="width: 18rem;">
         <img src="./media/images/concert-muse-los-angeles.jpg" class="card-img-top" alt="rock-concert-in-los-angeles">
         <div class="card-body">
-          <p class="card-text card__parrafo--color">21/DECEMBER: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, quisquam.</p>
+          <p class="card-text card__parrafo--color">21/DECEMBER: Concert in Los Angeles -- 20,156 attendees.</p>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="./media/images/concert-muse-monterey.jfif" class="card-img-top" alt="rock-concert-in-monterey">
         <div class="card-body">
-          <p class="card-text card__parrafo--color">21/NOVEMBER: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, aliquam.</p>
+          <p class="card-text card__parrafo--color">21/NOVEMBER: Concert in Monterey -- 44,432 attendees.</p>
         </div>
       </div>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="./media/images/concert-muse-san-francisco.jpeg" class="card-img-top" alt="rock-concert-in-san-francisco">
         <div class="card-body">
-          <p class="card-text card__parrafo--color">21/OCTOBER: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ut?</p>
+          <p class="card-text card__parrafo--color">21/OCTOBER: Concert in San Francisco -- 32,989 attendees.</p>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="./media/images/concert-muse-cabo.jpg" class="card-img-top" alt="rock-concert-in-cabo">
         <div class="card-body">
-          <p class="card-text card__parrafo--color">21/SEPTEMBER: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestias.</p>
+          <p class="card-text card__parrafo--color">21/SEPTEMBER: Concert in Cabo -- 25,737 attendees.</p>
         </div>
       </div>
     </aside>
@@ -260,7 +251,9 @@
       <div class="noticias__parrafo"><p>Articles</p></div>
       <div class="noticias__parrafo"><p>Details</p></div>
       <div class="noticias__parrafo"><p>Concert: Baltimore, MA</p></div>
-      <div class="noticias__parrafo"><p>November 11, 2021</p></div>
+      <div class="noticias__parrafo"><p>December 22, 2021</p></div>
+      <div class="noticias__parrafo"><p>Concert: Washington, DC</p></div>
+      <div class="noticias__parrafo"><p>January 11, 2022</p></div>
     </div>
     <div class="claseCalendario">
       <iframe

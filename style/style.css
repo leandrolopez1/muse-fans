@@ -13,16 +13,16 @@ body {
 .estilosBody--fontStyle {
   font-style: normal;
   font-family: "Quicksand", sans-serif;
-  line-height: 25px;
-  letter-spacing: 1px;
-  word-spacing: 1px; }
+  line-height: 1.563rem;
+  letter-spacing: 0.063rem;
+  word-spacing: 0.063rem; }
 
 /* A continuación le doy estilo al H1 */
 .titulo--fontStyle {
   color: white;
   font-family: "Quicksand", sans-serif;
   font-weight: lighter;
-  font-size: 50px; }
+  font-size: 3.126rem; }
 
 h1 {
   transition: all 3s; }
@@ -66,24 +66,6 @@ ul li:hover ul {
 li li a:hover {
   color: #b80000; }
 
-/* @keyframes home {
-        100% {
-          color: white;
-          background-color: rgb(184, 0, 0);
-          font-weight: normal;
-        }
-      }
-    
-      .homeAnimacion {
-        color: rgb(255, 0, 0);
-        background-color: black;
-        font-weight: bolder;
-        animation-name: home;
-        animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
-        animation-duration: 4s;
-        animation-delay: 3s;
-      } */
 @keyframes home {
   0% {
     width: 10%; }
@@ -97,9 +79,6 @@ li li a:hover {
     width: 10%; } }
 
 .homeAnimacion {
-  /* color: rgb(255, 0, 0);
-        background-color: black;
-        font-weight: bolder; */
   background-color: #b80000;
   animation-name: home;
   animation-timing-function: ease-in;
@@ -113,8 +92,8 @@ li li a:hover {
   grid-template-areas: "header header header" "carrusel carrusel aside" "suscripciones suscripciones aside" "noticias noticias calendario" "footer footer footer";
   grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
   grid-template-columns: 1f 1f 1f;
-  grid-column-gap: 30px;
-  grid-row-gap: 60px;
+  grid-column-gap: 1.875rem;
+  grid-row-gap: 3.75rem;
   justify-items: stretch;
   align-items: stretch;
   height: auto; }
@@ -126,14 +105,14 @@ li li a:hover {
   align-self: start;
   background-image: radial-gradient(#826aed, #4521e4);
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
   position: fixed;
   display: grid;
   grid-template-areas: "menu titulo redes";
   grid-template-rows: 1fr;
   grid-template-columns: 2fr 4fr 2fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 0.625rem;
   justify-items: center;
   align-items: center; }
 
@@ -143,7 +122,7 @@ li li a:hover {
 
 .claseMenu {
   grid-area: menu;
-  padding-left: 20px; }
+  padding-left: 1.25rem; }
 
 .claseRedes {
   grid-area: redes; }
@@ -152,29 +131,9 @@ li li a:hover {
 .claseCarrusel {
   margin-left: 0.5rem;
   grid-area: carrusel;
-  /* background-color: #1f001f;
-        display: grid;
-        grid-template-areas: "imagen1 imagen2 imagen3";
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 2fr 1fr;
-        justify-items: center;
-        align-items: center;
-        overflow: hidden; */
-  width: 707.07071px;
+  width: 60vw;
   justify-self: center; }
 
-/* Las siguientes clases son hijas de claseCarrusel */
-/* .claseImgHijo1 {
-        grid-area: imagen1;
-      }
-    
-      .claseImgHijo2 {
-        grid-area: imagen2;
-      }
-    
-      .claseImgHijo3 {
-        grid-area: imagen3;
-      } */
 /* La siguiente clase es hija de claseGrid */
 .contenidoEnMeses {
   margin-right: 0.5rem;
@@ -199,13 +158,13 @@ li li a:hover {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-rows: repeat(3, 1fr); }
 
 .noticias__parrafo {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 /* La siguiente clase es hija de claseGrid */
 .claseCalendario {
@@ -227,22 +186,13 @@ li li a:hover {
 
 /* A continuación le doy estilo a imágenes y logos de redes sociales */
 .claseImg {
-  /* width: 350px; */
   border-radius: 5%; }
 
 .claseImgBordeGallery {
   border-radius: 5%; }
 
-/* .claseImgMedio {
-        width: 450px;
-      } */
-/* .claseImgMedio:hover,
-      .claseImgHijo1:hover,
-      .claseImgHijo3:hover {
-        transform: scale(1.2, 1.2);
-      } */
 .claseImgLogo {
-  width: 70px;
+  width: 4.375rem;
   padding-bottom: 0.5rem; }
 
 /* A continuación le doy estilo a elementos varios */
@@ -282,7 +232,7 @@ p {
   z-index: 2;
   background-image: radial-gradient(#826aed, #4521e4);
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
   display: grid;
   grid-template-areas: "menu";
   grid-template-columns: 1fr;
@@ -318,32 +268,14 @@ p {
 /* Clase padre */
 .claseGridUsBiographyContact {
   display: grid;
-  grid-row-gap: 10px;
+  grid-row-gap: 0.625rem;
   grid-template-areas: "header" "imagen" "content" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 7fr 1fr;
+  grid-template-rows: 0.4fr 0.8fr 5fr 0.4fr;
   justify-items: center;
   align-items: center; }
 
 /* A continuación utilicé un each para agregar imágenes en las páginas us, bio y contact */
-.staffImg {
-  background-image: url("../media/images/staff.jpg");
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: contain; }
-
-.bandImg {
-  background-image: url("../media/images/band.jpg");
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: contain; }
-
-.contactImg {
-  background-image: url("../media/images/contact.jpg");
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: contain; }
-
 /* Clases hijas de claseGridUsBiographyContact */
 .headerGridUsBiographyContact {
   grid-area: header; }
@@ -351,10 +283,13 @@ p {
 .staffImg,
 .bandImg,
 .contactImg {
-  grid-area: imagen;
   width: 100%;
-  height: 100%;
-  align-self: center; }
+  margin-top: 5vh; }
+
+.bioGridImg,
+.usGridImg,
+.contactGridImg {
+  grid-area: imagen; }
 
 .contentGridUsBiographyContact {
   grid-area: content; }
@@ -376,7 +311,7 @@ p {
   z-index: 2;
   background-image: radial-gradient(#826aed, #4521e4);
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
   display: grid;
   grid-template-areas: "menu";
   grid-template-columns: 1fr;
@@ -418,95 +353,98 @@ p {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div2 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div3 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div4 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div5 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div6 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div7 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div8 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div9 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div10 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div11 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .div12 {
   background-color: #4521e4;
   text-align: center;
   align-self: center;
-  border: solid 0.1px white; }
+  border: solid 0.006rem white; }
 
 .card__parrafo--color {
   color: black; }
 
+.navbar {
+  display: none; }
+
 /* TABLET */
-@media only screen and (max-width: 767px) and (min-width: 321px) {
+@media only screen and (max-width: 767px) and (min-width: 415px) {
   .titulo--fontStyle {
-    font-size: 25px; }
+    font-size: 1.563rem; }
   .claseGrid {
     grid-template-areas: "header header" "carrusel aside" "suscripciones aside" "noticias calendario" "footer footer";
     grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
     grid-template-columns: 1f 1f;
-    grid-column-gap: 5px;
-    grid-row-gap: 10px; }
+    grid-column-gap: 0.313rem;
+    grid-row-gap: 0.625rem; }
   .claseHeader {
     grid-template-areas: "menu titulo";
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 4fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px; }
+    grid-column-gap: 0.625rem;
+    grid-row-gap: 0.625rem; }
   .claseMenu {
-    padding-left: 10px; }
+    padding-left: 0.625rem; }
   .claseCarrusel {
     margin-left: 0.1rem; }
   .carousel-indicators button {
@@ -532,33 +470,33 @@ p {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; }
   .claseGridUsBiographyContact {
-    grid-template-rows: 0.3fr 0.5fr 11fr 0.5fr; }
+    grid-template-rows: 0.8fr 0.8fr 11fr 0.5fr; }
   .margenSuperiorContact {
     margin-top: 50%; }
   .contactoMain--margenInferior {
     margin-bottom: 10rem; } }
 
 /* MOBILE */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 414px) {
   .titulo--fontStyle {
-    font-size: 25px; }
+    font-size: 1.563rem; }
   .claseGrid {
     grid-template-areas: "header" "carrusel" "suscripciones" "noticias" "footer";
     grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
     grid-template-columns: 1f;
-    grid-column-gap: 30px;
-    grid-row-gap: 60px; }
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 3.75rem; }
   .claseHeader {
     grid-template-areas: "menu";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px; }
+    grid-column-gap: 0.625rem;
+    grid-row-gap: 0.625rem; }
   .claseTitulo {
     display: none; }
   .claseMenu {
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
   .claseRedes {
     display: none; }
   .carousel-indicators button {
@@ -578,6 +516,18 @@ p {
   .claseGridUsBiographyContact {
     grid-template-areas: "header" "imagen" "content" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.4fr 11fr 0.1fr;
+    grid-template-rows: 0.9fr 0.9fr 11fr 0.1fr;
     justify-items: center;
-    align-items: center; } }
+    align-items: center; }
+  .claseImgGallery {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+  .claseVideosGallery {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+  .navbar {
+    display: flex; }
+  .claseMenu {
+    display: none; } }
