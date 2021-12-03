@@ -293,7 +293,6 @@ p {
   justify-items: center;
   align-items: center; }
 
-/* A continuación utilicé un each para agregar imágenes en las páginas us, bio y contact */
 /* Clases hijas de clases Grid de Us Biography y Contact */
 .headerGridUsBiographyContact {
   grid-area: header; }

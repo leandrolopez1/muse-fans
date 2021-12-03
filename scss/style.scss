@@ -398,16 +398,6 @@ p {
   align-items: center;
 }
 
-/* A continuación utilicé un each para agregar imágenes en las páginas us, bio y contact */
-// @each $fotoUsBio in staff, band, contact {
-//   .#{$fotoUsBio}Img {
-//     background-image: url("../media/images/#{$fotoUsBio}.jpg");
-//     background-position: center 100%;
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//   }
-// }
-
 /* Clases hijas de clases Grid de Us Biography y Contact */
 
 .headerGridUsBiographyContact {
