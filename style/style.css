@@ -219,7 +219,7 @@ p {
 .claseGridGallery {
   display: grid;
   grid-template-areas: "header" "spotify" "imagenes" "videos" "footer";
-  grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 0.9fr 1.65fr 2fr 2fr 0.25fr;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center; }
@@ -266,25 +266,43 @@ p {
 
 /* A continuación le doy estilo a las páginas us, biography y contact */
 /* Clase padre */
-.claseGridUsBiographyContact {
+.claseGridUs {
   display: grid;
   grid-row-gap: 0.625rem;
   grid-template-areas: "header" "imagen" "content" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 0.4fr 0.8fr 5fr 0.4fr;
+  grid-template-rows: 0.8fr 1fr 3.5fr 0.8fr;
+  justify-items: center;
+  align-items: center; }
+
+.claseGridBiography {
+  display: grid;
+  grid-row-gap: 0.625rem;
+  grid-template-areas: "header" "imagen" "content" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.44fr 0.6fr 4.2fr 0.3fr;
+  justify-items: center;
+  align-items: center; }
+
+.claseGridContact {
+  display: grid;
+  grid-row-gap: 0.625rem;
+  grid-template-areas: "header" "imagen" "content" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 1fr 1.5fr 0.5fr;
   justify-items: center;
   align-items: center; }
 
 /* A continuación utilicé un each para agregar imágenes en las páginas us, bio y contact */
-/* Clases hijas de claseGridUsBiographyContact */
+/* Clases hijas de clases Grid de Us Biography y Contact */
 .headerGridUsBiographyContact {
   grid-area: header; }
 
 .staffImg,
 .bandImg,
 .contactImg {
-  width: 100%;
-  margin-top: 5vh; }
+  width: 80vw;
+  height: 100%; }
 
 .bioGridImg,
 .usGridImg,
@@ -469,12 +487,16 @@ p {
     grid-template-areas: "menu";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; }
-  .claseGridUsBiographyContact {
-    grid-template-rows: 0.8fr 0.8fr 11fr 0.5fr; }
   .margenSuperiorContact {
     margin-top: 50%; }
   .contactoMain--margenInferior {
-    margin-bottom: 10rem; } }
+    margin-bottom: 10rem; }
+  .claseGridContact {
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1.2fr 0.8fr; }
+  .contactGridImg {
+    display: none; } }
 
 /* MOBILE */
 @media only screen and (max-width: 414px) {
@@ -513,20 +535,25 @@ p {
     padding: 1rem; }
   .contactoMain--margenInferior {
     margin-bottom: 15rem; }
-  .claseGridUsBiographyContact {
-    grid-template-areas: "header" "imagen" "content" "footer";
+  .claseGridUs {
+    grid-template-rows: 0.6fr 0.7fr 6fr 0.3fr; }
+  .claseGridBiography {
+    grid-template-rows: 0.2fr 0.4fr 11fr 0.4fr; }
+  .claseGridContact {
+    grid-template-areas: "header" "content" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 0.9fr 0.9fr 11fr 0.1fr;
-    justify-items: center;
-    align-items: center; }
+    grid-template-rows: 0.25fr 1.2fr 2fr; }
+  .contactImg {
+    display: none; }
   .claseImgGallery {
     display: flex;
     flex-direction: column;
     width: 100vw; }
+  .claseGridGallery {
+    grid-template-areas: "header" "spotify" "imagenes" "footer";
+    grid-template-rows: 0.4fr 1.35fr 2fr 0.5fr; }
   .claseVideosGallery {
-    display: flex;
-    flex-direction: column;
-    width: 100vw; }
+    display: none; }
   .navbar {
     display: flex; }
   .claseMenu {
