@@ -280,7 +280,7 @@ p {
   grid-row-gap: 0.625rem;
   grid-template-areas: "header" "imagen" "content" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 0.44fr 0.6fr 4.2fr 0.3fr;
+  grid-template-rows: 0.44fr 0.6fr 4.2fr 0.56fr;
   justify-items: center;
   align-items: center; }
 
@@ -444,6 +444,13 @@ p {
 .navbar {
   display: none; }
 
+.btn {
+  margin-top: 1rem; }
+
+.btn:hover {
+  font-style: italic;
+  font-weight: bolder; }
+
 /* TABLET */
 @media only screen and (max-width: 767px) and (min-width: 415px) {
   .titulo--fontStyle {
@@ -486,8 +493,6 @@ p {
     grid-template-areas: "menu";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; }
-  .margenSuperiorContact {
-    margin-top: 50%; }
   .contactoMain--margenInferior {
     margin-bottom: 10rem; }
   .claseGridContact {
@@ -514,7 +519,7 @@ p {
     grid-column-gap: 0.625rem;
     grid-row-gap: 0.625rem; }
   .claseTitulo {
-    display: none; }
+    font-size: 1.15778rem; }
   .claseMenu {
     padding-left: 0.625rem;
     padding-right: 0.625rem; }
@@ -554,7 +559,8 @@ p {
   .claseVideosGallery {
     display: none; }
   .navbar {
-    display: flex; }
+    display: flex;
+    align-self: flex-end; }
   .claseMenu {
     display: none; }
   .claseCarrusel {

@@ -379,7 +379,7 @@ p {
     "content"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 0.44fr 0.6fr 4.2fr 0.3fr;
+  grid-template-rows: 0.44fr 0.6fr 4.2fr 0.56fr;
   justify-items: center;
   align-items: center;
 }
@@ -506,6 +506,15 @@ p {
   display: none;
 }
 
+// Esta clase btn es del botón de bootstrap
+.btn {
+  margin-top: 1rem;
+}
+.btn:hover {
+  font-style: italic;
+  font-weight: bolder;
+}
+
 /* TABLET */
 
 @media only screen and (max-width: 767px) and (min-width: 415px) {
@@ -587,10 +596,6 @@ p {
     grid-template-rows: 1fr;
   }
 
-  .margenSuperiorContact {
-    margin-top: 50%;
-  }
-
   .contactoMain--margenInferior {
     margin-bottom: 10rem;
   }
@@ -636,7 +641,8 @@ p {
   }
 
   .claseTitulo {
-    display: none;
+    // display: none;
+    font-size: $h1FontSize/1.35;
   }
 
   .claseMenu {
@@ -713,6 +719,7 @@ p {
   // Esta clase navbar es del menu de bootstrap
   .navbar {
     display: flex;
+    align-self: flex-end;
   }
   .claseMenu {
     display: none;
