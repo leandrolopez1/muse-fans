@@ -219,7 +219,7 @@ p {
 .claseGridGallery {
   display: grid;
   grid-template-areas: "header" "spotify" "imagenes" "videos" "footer";
-  grid-template-rows: 0.9fr 1.65fr 2fr 2fr 0.25fr;
+  grid-template-rows: 0.2fr 1fr 2fr 2fr 0.25fr;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center; }
@@ -252,8 +252,15 @@ p {
 .claseImagenesGallery {
   grid-area: imagenes; }
 
+.claseImgGallery {
+  display: flex;
+  flex-direction: column;
+  width: 50vw; }
+
 .claseVideosGallery {
-  grid-area: videos; }
+  grid-area: videos;
+  display: flex;
+  flex-direction: column; }
 
 .claseFooterGallery {
   grid-area: footer;
@@ -493,6 +500,10 @@ p {
     grid-template-areas: "menu";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; }
+  .claseImgGallery {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
   .contactoMain--margenInferior {
     margin-bottom: 10rem; }
   .claseGridContact {
