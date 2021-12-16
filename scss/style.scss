@@ -349,6 +349,7 @@ p {
   grid-area: videos;
   display: flex;
   flex-direction: column;
+  row-gap: 7rem;
 }
 
 .claseFooterGallery {
@@ -594,7 +595,7 @@ p {
       "imagenes"
       "videos"
       "footer";
-    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 0.25fr 1.2fr 2fr 2fr 0.25fr;
     grid-template-columns: 1fr;
   }
 
@@ -607,7 +608,7 @@ p {
   .claseImgGallery {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 80vw;
   }
 
   .contactoMain--margenInferior {
