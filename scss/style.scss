@@ -352,6 +352,9 @@ p {
   flex-direction: column;
   row-gap: 7rem;
 }
+.videosMobile {
+  display: none;
+}
 
 .claseFooterGallery {
   grid-area: footer;
@@ -738,15 +741,13 @@ p {
       "header"
       "spotify"
       "imagenes"
-      "videos"
       "footer";
-    grid-template-rows: 1fr 1.35fr 2.8fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.35fr 2.8fr 0.5fr;
   }
   .claseVideosGallery {
-    grid-area: videos;
-    row-gap: 2rem;
-    justify-self: center;
+    display: none;
   }
+
   // Esta clase navbar es del menu de bootstrap
   .navbar {
     display: flex;

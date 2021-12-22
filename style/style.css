@@ -264,6 +264,9 @@ p {
   flex-direction: column;
   row-gap: 7rem; }
 
+.videosMobile {
+  display: none; }
+
 .claseFooterGallery {
   grid-area: footer;
   background-image: radial-gradient(#826aed, #4521e4);
@@ -575,12 +578,10 @@ p {
     flex-direction: column;
     width: 80vw; }
   .claseGridGallery {
-    grid-template-areas: "header" "spotify" "imagenes" "videos" "footer";
-    grid-template-rows: 1fr 1.35fr 2.8fr 2fr 0.5fr; }
+    grid-template-areas: "header" "spotify" "imagenes" "footer";
+    grid-template-rows: 1fr 1.35fr 2.8fr 0.5fr; }
   .claseVideosGallery {
-    grid-area: videos;
-    row-gap: 2rem;
-    justify-self: center; }
+    display: none; }
   .navbar {
     display: flex;
     align-self: flex-end; }
