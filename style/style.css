@@ -25,7 +25,8 @@ body {
   font-size: 3.126rem; }
 
 h1 {
-  transition: all 3s; }
+  transition: all 3s;
+  margin-top: 1rem; }
 
 h1:hover {
   transform: translate(0px, 10px);
@@ -520,7 +521,7 @@ p {
     font-size: 1.563rem; }
   .claseGrid {
     grid-template-areas: "header" "carrusel" "suscripciones" "noticias" "contenido" "footer";
-    grid-template-rows: 0.2fr 0.2fr 0.58fr 2.5fr 1fr 0.1fr;
+    grid-template-rows: 0.3fr 0.2fr 0.58fr 0.4fr 2fr 0.1fr;
     grid-template-columns: 1f;
     grid-column-gap: 1.875rem;
     grid-row-gap: 3.75rem; }
@@ -561,21 +562,32 @@ p {
     grid-template-areas: "header" "content" "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 1.2fr 2fr; }
+  .headerGridUsBiographyContact {
+    grid-area: header; }
+  .contactGrid {
+    grid-area: content; }
+  .footerGridUsBiographyContact {
+    grid-area: footer; }
   .contactImg {
     display: none; }
   .claseImgGallery {
     display: flex;
     flex-direction: column;
-    width: 100vw; }
+    width: 80vw; }
   .claseGridGallery {
-    grid-template-areas: "header" "spotify" "imagenes" "footer";
-    grid-template-rows: 0.4fr 1.35fr 2fr 0.5fr; }
+    grid-template-areas: "header" "spotify" "imagenes" "videos" "footer";
+    grid-template-rows: 1fr 1.35fr 2.8fr 2fr 0.5fr; }
   .claseVideosGallery {
-    display: none; }
+    grid-area: videos;
+    row-gap: 2rem;
+    justify-self: center; }
   .navbar {
     display: flex;
     align-self: flex-end; }
   .claseMenu {
     display: none; }
   .claseCarrusel {
-    width: 90vw; } }
+    width: 90vw; }
+  .text-white a {
+    color: white;
+    text-shadow: 0 0 30px #fff; } }

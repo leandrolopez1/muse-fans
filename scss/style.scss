@@ -40,6 +40,7 @@ body {
 
 h1 {
   transition: all 3s;
+  margin-top: 1rem;
 }
 
 h1:hover {
@@ -642,7 +643,7 @@ p {
       "noticias"
       "contenido"
       "footer";
-    grid-template-rows: 0.2fr 0.2fr 0.58fr 2.5fr 1fr 0.1fr;
+    grid-template-rows: 0.3fr 0.2fr 0.58fr 0.4fr 2fr 0.1fr;
     grid-template-columns: 1f;
     grid-column-gap: 1.875rem;
     grid-row-gap: 3.75rem;
@@ -680,10 +681,6 @@ p {
     display: none;
   }
 
-  // .contenidoEnMeses {
-  //   display: none;
-  // }
-
   .claseCalendario {
     display: none;
   }
@@ -718,6 +715,15 @@ p {
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 1.2fr 2fr;
   }
+  .headerGridUsBiographyContact {
+    grid-area: header;
+  }
+  .contactGrid {
+    grid-area: content;
+  }
+  .footerGridUsBiographyContact {
+    grid-area: footer;
+  }
   .contactImg {
     display: none;
   }
@@ -725,18 +731,21 @@ p {
   .claseImgGallery {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 80vw;
   }
   .claseGridGallery {
     grid-template-areas:
       "header"
       "spotify"
       "imagenes"
+      "videos"
       "footer";
-    grid-template-rows: 0.4fr 1.35fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.35fr 2.8fr 2fr 0.5fr;
   }
   .claseVideosGallery {
-    display: none;
+    grid-area: videos;
+    row-gap: 2rem;
+    justify-self: center;
   }
   // Esta clase navbar es del menu de bootstrap
   .navbar {
@@ -749,5 +758,9 @@ p {
 
   .claseCarrusel {
     width: 90vw;
+  }
+  .text-white a {
+    color: white;
+    text-shadow: 0 0 30px #fff;
   }
 }
