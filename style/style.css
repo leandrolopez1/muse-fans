@@ -526,7 +526,8 @@ p {
     grid-row-gap: 3.75rem; }
   .contenidoEnMeses {
     grid-area: contenido;
-    justify-self: center; }
+    justify-self: center;
+    animation: none; }
   .claseHeader {
     grid-template-areas: "menu";
     grid-template-rows: 1fr;
