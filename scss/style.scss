@@ -640,11 +640,17 @@ p {
       "carrusel"
       "suscripciones"
       "noticias"
+      "contenido"
       "footer";
-    grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
+    grid-template-rows: 0.2fr 0.2fr 0.58fr 2.5fr 1fr 0.1fr;
     grid-template-columns: 1f;
     grid-column-gap: 1.875rem;
     grid-row-gap: 3.75rem;
+  }
+
+  .contenidoEnMeses {
+    grid-area: contenido;
+    justify-self: center;
   }
 
   .claseHeader {
@@ -673,9 +679,9 @@ p {
     display: none;
   }
 
-  .contenidoEnMeses {
-    display: none;
-  }
+  // .contenidoEnMeses {
+  //   display: none;
+  // }
 
   .claseCalendario {
     display: none;

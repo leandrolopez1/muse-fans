@@ -519,11 +519,14 @@ p {
   .titulo--fontStyle {
     font-size: 1.563rem; }
   .claseGrid {
-    grid-template-areas: "header" "carrusel" "suscripciones" "noticias" "footer";
-    grid-template-rows: 0.75fr 2fr 2fr 2fr 0.75fr;
+    grid-template-areas: "header" "carrusel" "suscripciones" "noticias" "contenido" "footer";
+    grid-template-rows: 0.2fr 0.2fr 0.58fr 2.5fr 1fr 0.1fr;
     grid-template-columns: 1f;
     grid-column-gap: 1.875rem;
     grid-row-gap: 3.75rem; }
+  .contenidoEnMeses {
+    grid-area: contenido;
+    justify-self: center; }
   .claseHeader {
     grid-template-areas: "menu";
     grid-template-rows: 1fr;
@@ -538,8 +541,6 @@ p {
   .claseRedes {
     display: none; }
   .carousel-indicators button {
-    display: none; }
-  .contenidoEnMeses {
     display: none; }
   .claseCalendario {
     display: none; }
