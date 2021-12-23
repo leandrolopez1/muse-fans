@@ -578,7 +578,7 @@ p {
     width: 100vw; }
   .claseGridGallery {
     grid-template-areas: "header" "spotify" "imagenes" "videos" "footer";
-    grid-template-rows: 0.75fr 1.7fr 2.3fr 2.5fr 0.25fr; }
+    grid-template-rows: 0.5fr 1.7fr 2.3fr 2.5fr 0.2fr; }
   .videoResponsive {
     width: 100%;
     height: 0;
